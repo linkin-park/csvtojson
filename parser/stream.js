@@ -9,7 +9,7 @@ class CharacterStream {
 
   // what could be next
   peek() {
-    return this.value.charAt(this.i + 1);
+    return this.value.charAt(this.i);
   }
 
   // Is next character there

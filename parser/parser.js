@@ -36,9 +36,14 @@ function processCSV(data) {
         tempData = tempData.concat(ch);
     }
   }
-  // left over on last row
+
+  // left over on last row [EOF reached]
   if (intermResult.length > 0) {
+    // last value
+    intermResult.push(tempData)
+    // add rest of data to result
     result.push(intermResult);
+    // free memory
     intermResult = [];
   }
   return result;
@@ -58,8 +63,6 @@ function quotHandle(stream) {
         } else if (stream.peek() == '"') {
           stream.next();
           data += ch;
-        } else {
-          stream.error("CSV is invalid for quote handling");
         }
         break;
       default:
