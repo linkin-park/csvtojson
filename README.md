@@ -18,3 +18,5 @@ node .
 ```
 curl -X POST -T path/to.csv  http://localhost:1339 -v
 ```
+## TODO
+1. Handle other than CSV (DSV/other similar format)
