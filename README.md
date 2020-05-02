@@ -2,7 +2,7 @@
     A CSV to JSON convertor library
 
 ## Requirement
-1. Node 8+ (Node.js)[https://www.nodejs.org]
+1. Node 8+ [Node.js](https://www.nodejs.org)
 
 ## Setup
 1. Run the app 
