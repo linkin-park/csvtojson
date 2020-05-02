@@ -1,0 +1,12 @@
+{
+  "name": "csvtojson",
+  "version": "1.0.0",
+  "description": "// csv -- stream of characters -- > apply rules of CSV --> [[]] ---> convert to JSON",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
