@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": ["csv2json","csv to json","convert"],
+  "author": "linkin_park",
   "license": "MIT"
 }
