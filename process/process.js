@@ -11,7 +11,7 @@ function convertCSVToObjs(datas) {
   let names = datas.shift();
 
   for (data of datas) {
-    let obj = {};
+    const obj = {};
     for (let i = 0; i < names.length; i++) {
       obj[names[i]] = data[i];
     }
@@ -21,8 +21,8 @@ function convertCSVToObjs(datas) {
 }
 
 function convertCSVToJSON(data) {
-  let arrofarrays = parser.processCSV(data);
-  let arrofObjs = convertCSVToObjs(arrofarrays);
+  const arrofarrays = parser.processCSV(data);
+  const arrofObjs = convertCSVToObjs(arrofarrays);
   return JSON.stringify(arrofObjs);
 }
 
