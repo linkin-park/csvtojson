@@ -1,19 +1,21 @@
 const http = require("http");
-const process = require("./process/process");
+const csvProcess = require("./process/process");
+
+const PORT = process.env.PORT || 1339
 
 http
   .createServer((req, res) => {
     let csvRawData = "";
-    if (req.method == "POST") {
+    if (req.method === "POST") {
       req.on("data", chunk => {
         csvRawData += chunk;
       });
       req.on("end", () => {
         res.setHeader("Content-Type", "application/json");
-        res.end(process.convertCSVToJSON(csvRawData));
+        res.end(csvProcess.convertCSVToJSON(csvRawData));
       });
     } else {
       res.end("Only POST is accepted");
     }
   })
-  .listen(1339);
+  .listen(PORT,()=>console.log(`Listening on port ${PORT}\nReady to accept POST request`));
